@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CEE/NEET E-Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container" id="studentLogin">
+    <h2>Student Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="loginError"></p>
+    <p><a href="admin.html">Admin Login</a></p>
+  </div>
+
+  <div id="app" class="hidden">
+    <h2>Subjects</h2>
+    <div id="subjects" class="cards"></div>
+
+    <h3 id="chapterTitle" class="hidden"></h3>
+    <div id="chapters" class="cards"></div>
+
+    <div id="content" class="hidden">
+      <video id="videoPlayer" controls></video><br />
+      <a id="pdfLink" href="#" target="_blank" download>Download Notes (PDF)</a>
+      <div id="quizSection"></div>
+      <p id="progressStatus"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
