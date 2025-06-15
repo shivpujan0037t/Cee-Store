@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - E-Learning</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container" id="adminLogin">
+    <h2>Admin Login</h2>
+    <input type="text" id="adminUser" placeholder="Admin Username" />
+    <input type="password" id="adminPass" placeholder="Admin Password" />
+    <button onclick="adminLogin()">Login</button>
+    <p id="adminError"></p>
+  </div>
+
+  <div id="adminPanel" class="hidden">
+    <h2>Upload New Chapter</h2>
+    <label>Subject:
+      <input type="text" id="newSubject" placeholder="e.g., Physics" />
+    </label><br/>
+    <label>Chapter Name:
+      <input type="text" id="newChapter" placeholder="e.g., Motion" />
+    </label><br/>
+    <label>Video File Name (inside /videos/):
+      <input type="text" id="newVideo" placeholder="e.g., motion.mp4" />
+    </label><br/>
+    <label>PDF File Name (inside /pdfs/):
+      <input type="text" id="newPDF" placeholder="e.g., motion.pdf" />
+    </label><br/>
+    <label>Quiz Question:
+      <input type="text" id="quizQ" placeholder="e.g., Unit of force?" />
+    </label><br/>
+    <label>Options (comma separated):
+      <input type="text" id="quizOpts" placeholder="N,kg,J" />
+    </label><br/>
+    <label>Correct Option Index (e.g., 0 for first):
+      <input type="number" id="quizAns" />
+    </label><br/>
+    <button onclick="uploadChapter()">Upload</button>
+    <p id="uploadStatus"></p>
+    <p><a href="index.html">Back to Student App</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
